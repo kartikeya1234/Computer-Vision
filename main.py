@@ -245,13 +245,13 @@ if __name__ == "__main__":
         isANN = False
 
     elif args.dataSet == 'NIPS2017':
-        
-        NIPlabels = pd.read_csv('./Data/NIPS2017/images.csv')
-        trainingData = CustomDataSet(main_dir='./Data/NIPS2017/images',
+
+        NIPlabels = pd.read_csv('./data/NIPS2017/images.csv')
+        trainingData = CustomDataSet(main_dir='./data/NIPS2017/images',
                              labels=NIPlabels,
                              transform=modelTrainingTransforms[args.model][0]
                              )
-        testData = CustomDataSet(main_dir='./Data/NIPS2017/images',
+        testData = CustomDataSet(main_dir='./data/NIPS2017/images',
                              labels=NIPlabels,
                              transform=modelTrainingTransforms[args.model][1])        
 
